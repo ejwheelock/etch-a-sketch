@@ -4,10 +4,14 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+}
+
 div#palette {
-    background-color: lightblue;
+    background-color: lightyellow;
     display: grid;
-    grid-gap: 0.1em;
+    grid-gap: 0;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     width: 100vw;
@@ -15,5 +19,13 @@ div#palette {
 }
 
 .square {
-    border: 1px solid black;
+    border: 0.5px solid lightcyan;
+}
+
+/*.square:hover {
+    background-color: yellow;
+}*/
+
+.colored {
+    background-color: black;
 }
