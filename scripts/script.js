@@ -1,6 +1,5 @@
 console.log('Welcome to your Etch-a-Sketch!');
 
-
 function createGrid(side) {
     let con = document.querySelector('#palette');
     while (con.hasChildNodes()) {
@@ -35,12 +34,22 @@ function promptForSize() {
 
 function changeColor(e) {
     e.target.classList.add('colored');
+    let color = randomColor();
+    e.target.style.backgroundColor = color;
+}
+
+function randomColor() {
+    let red = Math.floor(Math.random()*255);
+    let green = Math.floor(Math.random()*255);
+    let blue = Math.floor(Math.random()*255);
+    let colorStr = `rgb(${red}, ${green}, ${blue})`;
+    return colorStr;
 }
 
 createGrid(16);
 
-let clearButton = document.querySelector('button');
-clearButton.addEventListener("click", promptForSize);
+let newGridButton = document.querySelector('button');
+newGridButton.addEventListener("click", promptForSize);
 
 
 
